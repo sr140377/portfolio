@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sriram R. | Computer Science Student</title>
+<meta name="description" content="Portfolio of Sriram R, final-year Computer Science student at VIT Vellore.">
+<style>
+:root{--bg:#06000f;--muted:#c3bdd6;--pink:#ff2d95;--purple:#8a2be2;--cyan:#00d4ff;--yellow:#ffd23f;--green:#3dff9a}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'Segoe UI',system-ui,Roboto,Arial,sans-serif;background:var(--bg);color:#fff;line-height:1.6;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:
+radial-gradient(ellipse 55% 45% at 5% 8%,rgba(110,35,210,.6),transparent 70%),
+radial-gradient(ellipse 50% 40% at 100% 40%,rgba(0,160,255,.22),transparent 70%),
+radial-gradient(ellipse 45% 40% at 100% 100%,rgba(205,25,120,.5),transparent 70%),var(--bg)}
+.blob{position:fixed;border-radius:50%;filter:blur(90px);opacity:.28;z-index:-1;animation:drift 14s ease-in-out infinite alternate}
+.b1{width:320px;height:320px;background:#8a2be2;top:20%;left:-80px}
+.b2{width:280px;height:280px;background:#ff2d95;bottom:10%;right:-60px;animation-delay:-6s}
+@keyframes drift{to{transform:translate(60px,-50px) scale(1.15)}}
+a{color:inherit;text-decoration:none}
+.container{width:min(1080px,90%);margin:0 auto}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#8a2be2,#ff2d95,#00d4ff);z-index:200}
+
+/* TOP MENU */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,0,22,.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;width:min(1080px,90%);margin:0 auto;height:72px;gap:16px}
+.logo{font-size:1.7rem;font-weight:800;background:linear-gradient(135deg,#a02be8,#ff2d95,#00d4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-links{display:flex;gap:6px;list-style:none}
+.nav-links a{display:block;padding:8px 16px;border-radius:30px;font-size:.93rem;font-weight:600;transition:.25s}
+.nav-links a:hover{background:rgba(255,255,255,.1)}
+.nav-links a.active{background:linear-gradient(135deg,#8a2be2,#ff2d95);box-shadow:0 4px 16px rgba(255,45,149,.4)}
+.hire{padding:9px 20px;border-radius:30px;font-weight:700;font-size:.88rem;background:linear-gradient(135deg,#00d4ff,#8a2be2);transition:.25s;white-space:nowrap}
+.hire:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,212,255,.4)}
+
+section{padding:105px 0 60px}
+.title{text-align:center;font-size:2.6rem;font-weight:800;background:linear-gradient(90deg,#ff2d95,#ffb347,#00d4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{text-align:center;color:var(--muted);margin-bottom:46px}
+
+/* HERO */
+#home{min-height:100vh;display:flex;align-items:center;padding-top:110px}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:40px;width:min(1080px,90%);margin:0 auto}
+.hero-text{max-width:580px}
+.hello{color:var(--cyan);font-weight:700;margin-bottom:6px}
+.hero h1{font-size:3.8rem;line-height:1.1;font-weight:800;margin-bottom:12px}
+.hero h1 span{background:linear-gradient(135deg,#a02be8,#ff2d95);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 em{font-style:normal;color:var(--cyan)}
+.hero h2{font-size:1.5rem;margin-bottom:14px;color:#f1eefc}
+.hero h2 b{color:var(--yellow)}
+.hero p{color:var(--muted);margin-bottom:26px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;border-radius:50px;font-weight:700;font-size:.95rem;border:none;color:#fff;cursor:pointer;font-family:inherit;transition:.25s}
+.btn-p{background:linear-gradient(135deg,#8a2be2,#ff2d95);box-shadow:0 6px 22px rgba(255,45,149,.35)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(255,45,149,.55)}
+.btn-o{border:1px solid rgba(0,212,255,.6)}
+.btn-o:hover{transform:translateY(-3px);background:rgba(0,212,255,.15)}
+.stats{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
+.stats div{font-size:.8rem;color:var(--muted)}
+.stats b{display:block;font-size:1.7rem;color:#fff}
+.stats div:nth-child(1) b{color:var(--green)}.stats div:nth-child(2) b{color:var(--yellow)}.stats div:nth-child(3) b{color:var(--cyan)}
+.avatar{width:290px;height:290px;border-radius:50%;padding:6px;flex-shrink:0;background:conic-gradient(from 0deg,#b026ff,#ff2d95,#ffd23f,#00d4ff,#b026ff);box-shadow:0 0 60px rgba(255,45,149,.4),0 0 100px rgba(0,212,255,.2);animation:spin-float 6s ease-in-out infinite}
+.avatar div{width:100%;height:100%;border-radius:50%;background:#0d0225;display:flex;align-items:center;justify-content:center;font-size:4.3rem;font-weight:800}
+@keyframes spin-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+
+/* CARDS */
+.card{--c:#ff2d95;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:28px;transition:.3s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--c)}
+.card:hover{transform:translateY(-7px);border-color:var(--c);box-shadow:0 14px 36px color-mix(in srgb,var(--c) 35%,transparent)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.about h3{color:var(--c);margin-bottom:12px}
+.about p{color:var(--muted);font-size:.94rem;margin-bottom:10px}
+
+/* SKILLS */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.skill{text-align:center}
+.skill .ico{font-size:2.3rem}
+.skill h3{margin:4px 0}
+.skill p{font-size:.85rem;color:var(--muted);margin-bottom:14px}
+.meter{height:8px;border-radius:8px;background:rgba(255,255,255,.1);overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:var(--c);border-radius:8px;transition:width 1.4s ease}
+.lvl{font-size:.75rem;color:var(--c);font-weight:700;margin-top:6px}
+
+/* PROJECTS */
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.project{padding:0;display:flex;flex-direction:column}
+.p-top{height:140px;display:flex;align-items:center;justify-content:center;font-size:3.2rem;position:relative;margin-top:4px}
+.status{position:absolute;top:12px;right:12px;font-size:.7rem;font-weight:700;padding:4px 11px;border-radius:20px;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.3)}
+.status::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:6px;box-shadow:0 0 8px var(--green)}
+.p-body{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
+.p-body h3{font-size:1.12rem;margin-bottom:6px}
+.p-body>p{font-size:.85rem;color:var(--muted);margin-bottom:12px}
+.p-body h4{font-size:.78rem;letter-spacing:1px;text-transform:uppercase;color:var(--c);margin-bottom:6px}
+.feat{list-style:none;margin-bottom:16px;flex:1}
+.feat li{font-size:.83rem;color:#e6e1f5;padding-left:22px;position:relative;margin-bottom:5px}
+.feat li::before{content:"✔";position:absolute;left:0;color:var(--c);font-weight:700}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:.7rem;padding:4px 10px;border-radius:20px;color:#fff;background:color-mix(in srgb,var(--c) 30%,transparent);border:1px solid color-mix(in srgb,var(--c) 60%,transparent)}
+
+/* EDUCATION */
+.timeline{display:flex;flex-direction:column;gap:22px;width:min(780px,100%);margin:0 auto}
+.year{color:var(--cyan);font-size:.8rem;font-weight:700}
+.edu h3{margin:4px 0 6px}.edu p{color:var(--muted);font-size:.9rem}
+
+/* CONNECT */
+.cgrid{display:grid;grid-template-columns:1.05fr 1fr;gap:26px}
+.ccard{padding:30px 26px;border-radius:26px}
+.ccard h3{color:#ea3aa6;font-size:1.4rem;margin-bottom:20px}
+.ci{margin-bottom:18px}
+.ci b{display:block;color:#ff2d95;font-size:.95rem;margin-bottom:4px}
+.ci a,.ci span{color:#d4d0df;font-size:.95rem}.ci a:hover{color:var(--cyan)}
+form{display:flex;flex-direction:column;gap:14px}
+input,textarea{width:100%;padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.07);color:#fff;font-family:inherit;font-size:.9rem;outline:none;transition:.25s}
+input::placeholder,textarea::placeholder{color:#8f89a3}
+input:focus,textarea:focus{border-color:var(--pink);box-shadow:0 0 0 3px rgba(255,45,149,.15)}
+textarea{height:118px;resize:vertical}
+form .btn{align-self:flex-start;padding:12px 24px;font-size:.88rem}
+#formMsg{font-size:.85rem;color:var(--green);min-height:1.2em}
+footer{text-align:center;padding:30px 0 40px;color:#8f89a3;font-size:.85rem;border-top:1px solid rgba(255,255,255,.07)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}
+
+@media(max-width:900px){
+ .nav{height:auto;flex-wrap:wrap;padding:10px 0 8px}
+ .nav-links{order:3;width:100%;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+ .nav-links a{white-space:nowrap;padding:7px 14px}
+ section{padding-top:150px}#home{padding-top:140px}
+ .skills,.projects{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:720px){
+ .hero{flex-direction:column-reverse;text-align:center}.btns,.stats{justify-content:center}
+ .hero h1{font-size:2.8rem}.avatar{width:210px;height:210px}
+ .about,.cgrid,.skills,.projects{grid-template-columns:1fr}.title{font-size:2.1rem}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div><div class="blob b1"></div><div class="blob b2"></div>
+
+<header>
+  <div class="nav">
+    <a href="#home" class="logo">SR.</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Connect</a></li>
+    </ul>
+    <a href="#contact" class="hire">✉ Hire Me</a>
+  </div>
+</header>
+
+<section id="home">
+  <div class="hero">
+    <div class="hero-text">
+      <div class="hello">👋 HELLO, I'M</div>
+      <h1>Sriram <span>R</span><em>.</em></h1>
+      <h2>Computer Science Student 💻 · <b id="typed"></b></h2>
+      <p>I build creative digital experiences, practical software applications and innovative solutions using technology. Currently exploring software development, web development and artificial intelligence.</p>
+      <div class="btns">
+        <a href="#projects" class="btn btn-p">🚀 Explore My Work</a>
+        <a href="#contact" class="btn btn-o">📩 Contact Me</a>
+      </div>
+      <div class="stats">
+        <div><b>6</b>Projects Completed</div>
+        <div><b>6+</b>Technologies</div>
+        <div><b>Final Year</b>VIT Vellore</div>
+      </div>
+    </div>
+    <div class="avatar"><div>SR</div></div>
+  </div>
+</section>
+
+<section id="about"><div class="container reveal">
+  <h2 class="title">About Me</h2><p class="sub">A little bit about who I am</p>
+  <div class="about">
+    <div class="card" style="--c:#ff2d95"><h3>🧑‍💻 Who Am I?</h3>
+      <p>I am a final-year Computer Science student at VIT Vellore, passionate about programming, technology and creating useful applications.</p>
+      <p>I enjoy learning by building projects rather than just studying concepts theoretically.</p></div>
+    <div class="card" style="--c:#00d4ff"><h3>🎯 My Goal</h3>
+      <p>My goal is to become a skilled software developer and gain real-world experience through internships, hackathons and meaningful projects.</p>
+      <p>I am always interested in learning new technologies and challenging myself with new problems.</p></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="container reveal">
+  <h2 class="title">My Skills</h2><p class="sub">Technologies I'm learning and working with</p>
+  <div class="skills">
+    <div class="card skill" style="--c:#3dff9a"><div class="ico">🐍</div><h3>Python</h3><p>Programming, automation and application development</p><div class="meter"><i data-w="85"></i></div><div class="lvl">85%</div></div>
+    <div class="card skill" style="--c:#00d4ff"><div class="ico">🌐</div><h3>HTML &amp; CSS</h3><p>Responsive and modern website development</p><div class="meter"><i data-w="90"></i></div><div class="lvl">90%</div></div>
+    <div class="card skill" style="--c:#ffd23f"><div class="ico">⚡</div><h3>JavaScript</h3><p>Interactive and dynamic web applications</p><div class="meter"><i data-w="75"></i></div><div class="lvl">75%</div></div>
+    <div class="card skill" style="--c:#b57bff"><div class="ico">🗄️</div><h3>SQL</h3><p>Database management and data handling</p><div class="meter"><i data-w="75"></i></div><div class="lvl">75%</div></div>
+    <div class="card skill" style="--c:#ff2d95"><div class="ico">📊</div><h3>Data Analysis</h3><p>Charts, statistics and meaningful insights</p><div class="meter"><i data-w="70"></i></div><div class="lvl">70%</div></div>
+    <div class="card skill" style="--c:#ff8a3d"><div class="ico">🔧</div><h3>Git &amp; GitHub</h3><p>Version control and project collaboration</p><div class="meter"><i data-w="80"></i></div><div class="lvl">80%</div></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="container reveal">
+  <h2 class="title">Featured Projects</h2><p class="sub">Things I have built and experimented with</p>
+  <div class="projects">
+
+    <div class="card project" style="--c:#6aa5ff">
+      <div class="p-top" style="background:linear-gradient(135deg,#6a11cb,#2575fc)">💰<span class="status">Completed</span></div>
+      <div class="p-body"><h3>Financial Management System</h3>
+        <p>A Python application that helps users manage income, expenses, budgets and savings with visual financial analysis.</p>
+        <h4>Key Features</h4>
+        <ul class="feat"><li>Add and track income &amp; expenses</li><li>Monthly budget limits with alerts</li><li>Savings goal tracker</li><li>Pie and bar chart reports</li><li>Data saved in JSON files</li></ul>
+        <div class="tags"><span>Python</span><span>Matplotlib</span><span>JSON</span></div></div>
+    </div>
+
+    <div class="card project" style="--c:#ff5f8a">
+      <div class="p-top" style="background:linear-gradient(135deg,#ff0f9b,#ff6a5c)">🌐<span class="status">Completed</span></div>
+      <div class="p-body"><h3>Personal Portfolio</h3>
+        <p>A colorful responsive website designed to showcase my skills, projects, education and achievements.</p>
+        <h4>Key Features</h4>
+        <ul class="feat"><li>Fully responsive on all devices</li><li>Smooth scrolling navigation</li><li>Animated gradients &amp; scroll effects</li><li>Skills, projects &amp; education sections</li><li>Working contact form</li></ul>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+    </div>
+
+    <div class="card project" style="--c:#00d4ff">
+      <div class="p-top" style="background:linear-gradient(135deg,#00c6ff,#0072ff)">📊<span class="status">Completed</span></div>
+      <div class="p-body"><h3>Student Task Manager</h3>
+        <p>A project that analyzes the student's tasks and provides a better plan to boost the student's academic performance.</p>
+        <h4>Key Features</h4>
+        <ul class="feat"><li>Add tasks with deadlines &amp; priority</li><li>Smart daily study plan suggestions</li><li>Progress and completion charts</li><li>Overdue task reminders</li><li>Weekly performance summary</li></ul>
+        <div class="tags"><span>Python</span><span>Data</span><span>Charts</span></div></div>
+    </div>
+
+    <div class="card project" style="--c:#3dff9a">
+      <div class="p-top" style="background:linear-gradient(135deg,#11998e,#38ef7d)">🌦️<span class="status">Completed</span></div>
+      <div class="p-body"><h3>Weather Forecast App</h3>
+        <p>A clean web app that shows live weather, temperature trends and a 5-day forecast for any searched city.</p>
+        <h4>Key Features</h4>
+        <ul class="feat"><li>Search any city worldwide</li><li>Live temperature, humidity &amp; wind</li><li>5-day forecast cards</li><li>Weather-based icons &amp; backgrounds</li><li>°C / °F unit toggle</li></ul>
+        <div class="tags"><span>JavaScript</span><span>REST API</span><span>CSS</span></div></div>
+    </div>
+
+    <div class="card project" style="--c:#ffa23d">
+      <div class="p-top" style="background:linear-gradient(135deg,#f7971e,#ff512f)">📚<span class="status">Completed</span></div>
+      <div class="p-body"><h3>Library Management System</h3>
+        <p>A database-driven system to manage books, members, issue and return records with fine calculation.</p>
+        <h4>Key Features</h4>
+        <ul class="feat"><li>Add, update and search books</li><li>Member registration &amp; records</li><li>Issue / return with due dates</li><li>Automatic late-fine calculation</li><li>SQL database with Tkinter GUI</li></ul>
+        <div class="tags"><span>Python</span><span>SQL</span><span>Tkinter</span></div></div>
+    </div>
+
+    <div class="card project" style="--c:#d46bff">
+      <div class="p-top" style="background:linear-gradient(135deg,#7f00ff,#e100ff)">🧠<span class="status">Completed</span></div>
+      <div class="p-body"><h3>Quiz Master</h3>
+        <p>An interactive quiz platform with timed questions, instant scoring and category-wise performance tracking.</p>
+        <h4>Key Features</h4>
+        <ul class="feat"><li>Multiple categories &amp; difficulty levels</li><li>Countdown timer for each question</li><li>Instant answer feedback</li><li>Final score with result breakdown</li><li>High-score leaderboard</li></ul>
+        <div class="tags"><span>HTML</span><span>JavaScript</span><span>CSS</span></div></div>
+    </div>
+
+  </div>
+</div></section>
+
+<section id="education"><div class="container reveal">
+  <h2 class="title">Education</h2><p class="sub">My academic journey</p>
+  <div class="timeline">
+    <div class="card edu" style="--c:#00d4ff"><div class="year">2023 - Present</div><h3>🎓 Bachelor's Degree in Computer Science</h3><p>Currently in my final year at VIT Vellore, with a focus on programming, computer science fundamentals and software development.</p></div>
+    <div class="card edu" style="--c:#ffd23f"><div class="year">2021 - 2023</div><h3>🏫 Higher Secondary Education</h3><p>Completed higher secondary education with a strong interest in science and computer-related subjects.</p></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="container reveal">
+  <h2 class="title" style="background:none;color:#e83aa8;-webkit-text-fill-color:#e83aa8">Let's Connect</h2>
+  <p class="sub">Have an opportunity or idea? Let's talk!</p>
+  <div class="cgrid">
+    <div class="card ccard" style="--c:#ff2d95">
+      <h3>📬 Contact Information</h3>
+      <div class="ci"><b>📧 Email</b><a href="mailto:sriram777123@gmail.com">sriram777123@gmail.com</a></div>
+      <div class="ci"><b>💼 LinkedIn</b><a href="https://linkedin.com/in/sriram-r-profile" target="_blank" rel="noopener">linkedin.com/in/sriram-r-profile</a></div>
+      <div class="ci"><b>💻 GitHub</b><a href="https://github.com/sriram-r-tech" target="_blank" rel="noopener">github.com/sriram-r-tech</a></div>
+      <div class="ci"><b>📍 Location</b><span>India</span></div>
+    </div>
+    <div class="card ccard" style="--c:#8a2be2">
+      <form id="cf">
+        <input type="text" id="n" placeholder="Your Name" required>
+        <input type="email" id="e" placeholder="Your Email" required>
+        <textarea id="m" placeholder="Write your message..." required></textarea>
+        <button type="submit" class="btn btn-p">Send Message 🚀</button>
+        <div id="formMsg"></div>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<footer>© 2026 Sriram R. All rights reserved.</footer>
+
+<script>
+// scroll progress + active menu
+const links=[...document.querySelectorAll('.nav-links a')];
+const secs=links.map(l=>document.querySelector(l.getAttribute('href')));
+function onScroll(){
+  const h=document.documentElement;
+  document.getElementById('bar').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+  const y=window.scrollY+160;let cur=0;
+  secs.forEach((s,i)=>{if(s&&s.offsetTop<=y)cur=i});
+  links.forEach((l,i)=>l.classList.toggle('active',i===cur));
+}
+addEventListener('scroll',onScroll);onScroll();
+
+// reveal + skill bars
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('show');
+    e.target.querySelectorAll('.meter i').forEach(b=>b.style.width=b.dataset.w+'%');io.unobserve(e.target)}
+}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// typing effect
+const words=['Web Developer','Python Programmer','Problem Solver','Future Software Engineer'];
+let wi=0,ci=0,del=false;const t=document.getElementById('typed');
+(function type(){
+  const w=words[wi];t.textContent=w.slice(0,ci);
+  if(!del&&ci++===w.length){del=true;return setTimeout(type,1400)}
+  if(del&&--ci===0){del=false;wi=(wi+1)%words.length}
+  setTimeout(type,del?45:90);
+})();
+
+// contact form -> opens mail app
+document.getElementById('cf').addEventListener('submit',e=>{
+  e.preventDefault();
+  const n=document.getElementById('n').value.trim(),em=document.getElementById('e').value.trim(),m=document.getElementById('m').value.trim();
+  location.href='mailto:sriram777123@gmail.com?subject='+encodeURIComponent('Portfolio message from '+n)+'&body='+encodeURIComponent(m+'\n\n— '+n+' ('+em+')');
+  document.getElementById('formMsg').textContent='Opening your mail app… thank you!';
+  e.target.reset();
+});
+</script>
+</body>
+</html>
